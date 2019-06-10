@@ -52,7 +52,8 @@ return new Promise((resolve, reject) => {
    
   
   if(data.hasOwnProperty("Time Series (Daily)")) {
-   var seriesDataDay = data["Meta Data"]["3. Last Refreshed"];
+   var seriesDataDay = data["Meta Data"]["3. Last Refreshed"].split(" ")[0];
+   console.log(seriesDataDay, data)
   // console.log("successfully obtained stockdata from API",
   // data["Time Series (Daily)"][seriesDataDay]["4. close"])
    resolve({
